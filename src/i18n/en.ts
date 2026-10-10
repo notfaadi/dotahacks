@@ -10,7 +10,7 @@ export const en: Translations = {
     domain: SITE_DOMAIN,
     title: `Dota 2 Hacks ${SEO_YEAR} | Cheats, Scripts & Aimbot for Dota 2`,
     description:
-      'Download the best Dota 2 hacks and cheats for 2026. Undetected aimbot, ESP, maphack, scripts, and auto-combo tools. Free and premium Dota 2 hacks.',
+      'Undetected Dota 2 hacks for ranked play: ESP, maphack, scripts, and auto-combo. Compare Lite and Pro tiers, read setup guides, and checkout securely—updated every patch.',
     discord: PRIMARY_CHECKOUT_PATH,
   },
   nav: [

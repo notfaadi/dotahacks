@@ -21,7 +21,7 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
   '/': {
     title: `Dota 2 Hacks ${SEO_YEAR} | Cheats, Scripts & Aimbot for Dota 2`,
     description:
-      'Download the best Dota 2 hacks and dota cheats for 2026. Undetected aimbot, ESP, maphack, scripts, and auto-combo—whether you search dota hacks or dota 2 hacks, start here.',
+      'Undetected Dota 2 hacks for ranked play: ESP, maphack, scripts, and auto-combo. Compare Lite and Pro tiers, read setup guides, and checkout securely—updated every patch.',
     ogDescription:
       'Undetected Dota 2 hacks and cheats. Aimbot, ESP, maphack, auto-combo and scripts. Free and premium. Updated for 2026.',
     keywords: DEFAULT_META_KEYWORDS,
