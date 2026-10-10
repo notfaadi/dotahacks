@@ -7,8 +7,8 @@ const productBase = PRODUCT_BASE;
 export const en: Translations = {
   site: {
     name: 'Dota 2 Hacks',
-    logoPrefix: 'dota 2 ',
-    logoAccent: 'hacks',
+    logoPrefix: 'Dota 2 ',
+    logoAccent: 'Hacks',
     domain: SITE_DOMAIN,
     title: `Dota 2 Hacks ${SEO_YEAR} | Cheats, Scripts & Aimbot for Dota 2`,
     description:
@@ -185,7 +185,7 @@ export const en: Translations = {
     title: 'Free vs Premium Dota 2 Cheats',
     subtitle:
       'Most dota 2 cheat shops ship stale loaders, obvious automation, and ticket bots. We built dotacheats.com around patch-day delivery, humanized scripts, and live operators.',
-    usLabel: 'DotaCheats',
+    usLabel: 'Dota 2 Hacks',
     otherLabel: 'Typical provider',
     rows: [
       {
