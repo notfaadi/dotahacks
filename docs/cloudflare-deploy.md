@@ -7,7 +7,7 @@ Static Astro site → **`dist/`**.
 | Setting | Value |
 |--------|--------|
 | **Build command** | `npm run build` |
-| **Deploy command** | `npm run cf:upload` (strips stale `dist/_redirects` before Wrangler) |
+| **Deploy command** | `node scripts/wrangler-deploy.mjs` or `npm run cf:upload` |
 
 Do **not** use bare `npx wrangler deploy` — Wrangler may auto-run `astro add cloudflare` and fail the build.
 
@@ -32,4 +32,6 @@ Set redirects in **Cloudflare → Rules → Redirect Rules**:
 
 Hard-refresh the site. Header should show **Dota 2** + **Hacks** (purple).
 
-If you keep **`npx wrangler deploy`**, prefix it with `node scripts/strip-dist-redirects.mjs &&` so cached absolute-URL `_redirects` never reach the API.
+Do **not** use bare **`npx wrangler deploy`** — it skips the pre-deploy strip. Use **`node scripts/wrangler-deploy.mjs`** instead (same as `npm run cf:upload`).
+
+The build wipes **`dist/`** first (`prepare-dist.mjs`) and runs **`postbuild`** strip so Cloudflare’s build cache cannot restore an old `_redirects`.
