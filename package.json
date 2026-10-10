@@ -12,7 +12,8 @@
     "start": "node scripts/serve.mjs",
     "astro": "astro",
     "optimize:images": "node scripts/optimize-images.mjs",
-    "deploy:cloudflare": "npm run build && wrangler deploy --config wrangler.toml"
+    "deploy:cloudflare": "npm run build && npm run cf:upload",
+    "cf:upload": "wrangler deploy --config wrangler.toml"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",

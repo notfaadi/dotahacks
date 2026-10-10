@@ -1,31 +1,24 @@
 # Deploy on Cloudflare (dota2hacks)
 
-Static Astro site. Build output: **`dist/`** (HTML at `dist/index.html`).
+Static Astro site → **`dist/`**.
 
-## Required: `wrangler.toml` in the repo
-
-Cloudflare runs **`npx wrangler deploy`** on your project. Without `wrangler.toml`, Wrangler **auto-installs `@astrojs/cloudflare`**, runs a **second build**, and deploy fails.
-
-This repo includes **`wrangler.toml`** (static assets only). Keep it committed.
-
-## Workers Builds (your current setup)
+## Workers Builds — required settings
 
 | Setting | Value |
 |--------|--------|
-| Build command | `npm run build` |
-| Deploy command | `npx wrangler deploy --config wrangler.toml` |
+| **Build command** | `npm run build` |
+| **Deploy command** | `npm run cf:upload` |
 
-Do **not** use bare `npx wrangler deploy` until `wrangler.toml` is on the branch Cloudflare builds.
+Do **not** use bare `npx wrangler deploy` — Wrangler may auto-run `astro add cloudflare` and fail the build.
 
-After a successful deploy, attach **dota2hacks.org** under **Domains**.
+`wrangler.toml` and `wrangler.jsonc` are committed (static assets only).
 
 ## Cloudflare Pages (alternative)
 
-1. Create a **Pages** project from GitHub `notfaadi/dota2hacks`.
-2. Build: `npm run build`
-3. Output directory: `dist`
-4. **Deploy command: leave empty**
+- Build: `npm run build`
+- Output directory: `dist`
+- **Deploy command: leave empty**
 
-## Before go-live
+## After deploy
 
-Set **`SITE_DOMAIN`** in `src/config/site.ts`, then redeploy.
+Hard-refresh the site. Header should show **Dota 2** + **Hacks** (purple).

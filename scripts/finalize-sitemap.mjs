@@ -43,7 +43,15 @@ if (!located) {
 
 const { file: source, outDir: distRoot } = located;
 
-const { SITE_URL } = await import('../src/config/site.ts');
+function readSiteUrl() {
+  const siteFile = path.join(root, 'src/config/site.ts');
+  const source = fs.readFileSync(siteFile, 'utf8');
+  const match = source.match(/SITE_DOMAIN\s*=\s*['"]([^'"]+)['"]/);
+  const domain = match?.[1] ?? 'dota2hacks.org';
+  return `https://${domain}`;
+}
+
+const SITE_URL = readSiteUrl();
 
 const raw = fs.readFileSync(source, 'utf8');
 const urlCount = (raw.match(/<url>/g) ?? []).length;
