@@ -1,0 +1,25 @@
+---
+import { ZADEYO_DOTA2_AFFILIATE } from '../../../config/checkout-redirects.mjs';
+
+const destination = ZADEYO_DOTA2_AFFILIATE;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Redirecting to checkout…</title>
+    <meta http-equiv="refresh" content={`0;url=${destination}`} />
+    <link rel="canonical" href={destination} />
+    <script is:inline define:vars={{ destination }}>
+      location.replace(destination);
+    </script>
+  </head>
+  <body>
+    <p>
+      <a href={destination}>Continue to Zadeyo checkout</a>
+    </p>
+  </body>
+</html>
