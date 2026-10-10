@@ -7,13 +7,13 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/optimize-images.mjs && astro build && node scripts/prune-dist-images.mjs && node scripts/finalize-sitemap.mjs && node scripts/indexnow.mjs",
+    "build": "node scripts/strip-dist-redirects.mjs && node scripts/optimize-images.mjs && astro build && node scripts/prune-dist-images.mjs && node scripts/finalize-sitemap.mjs && node scripts/indexnow.mjs && node scripts/strip-dist-redirects.mjs",
     "preview": "astro preview --host 0.0.0.0",
     "start": "node scripts/serve.mjs",
     "astro": "astro",
     "optimize:images": "node scripts/optimize-images.mjs",
     "deploy:cloudflare": "npm run build && npm run cf:upload",
-    "cf:upload": "wrangler deploy --config wrangler.toml"
+    "cf:upload": "node scripts/strip-dist-redirects.mjs && wrangler deploy --config wrangler.toml"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
