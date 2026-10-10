@@ -1,4 +1,0 @@
-# Apex HTTPS only (fixes www/non-www and HTTP → HTTPS for SEO audits)
-https://www.dota2hacks.org/* https://dota2hacks.org/:splat 301
-http://dota2hacks.org/* https://dota2hacks.org/:splat 301
-http://www.dota2hacks.org/* https://dota2hacks.org/:splat 301
