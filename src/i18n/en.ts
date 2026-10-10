@@ -6,7 +6,9 @@ const productBase = PRODUCT_BASE;
 
 export const en: Translations = {
   site: {
-    name: 'DotaCheats',
+    name: 'Dota 2 Hacks',
+    logoPrefix: 'dota 2 ',
+    logoAccent: 'hacks',
     domain: SITE_DOMAIN,
     title: `Dota 2 Hacks ${SEO_YEAR} | Cheats, Scripts & Aimbot for Dota 2`,
     description:
@@ -787,7 +789,7 @@ export const en: Translations = {
     skipLink: 'Skip to main content',
     browseCheats: 'Try Now',
     browseCheatsMobile: 'Start checkout',
-    homeAria: 'DotaCheats home',
+    homeAria: 'Dota 2 Hacks home',
     checkoutAria: 'Start checkout',
     discordAria: 'Join DotaCheats on Discord',
     menuOpen: 'Open menu',

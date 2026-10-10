@@ -26,7 +26,7 @@ export function websiteSchema() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     '@id': `${SITE_ORIGIN}/#website`,
-    name: 'DotaCheats',
+    name: 'Dota 2 Hacks',
     alternateName: ['Dota 2 Hacks', 'Dota Hacks', 'Dota 2 Cheats'],
     url: `${SITE_ORIGIN}/`,
     inLanguage: 'en-US',
@@ -43,7 +43,7 @@ export function organizationSchema() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     '@id': `${SITE_ORIGIN}/#organization`,
-    name: 'DotaCheats',
+    name: 'Dota 2 Hacks',
     url: `${SITE_ORIGIN}/`,
     logo: `${SITE_ORIGIN}/logo.svg`,
     email: SUPPORT_EMAIL,
@@ -82,7 +82,7 @@ export function collectionPageSchema(input: { name: string; description: string;
     inLanguage: 'en-US',
     isPartOf: {
       '@type': 'WebSite',
-      name: 'DotaCheats',
+      name: 'Dota 2 Hacks',
       url: `${SITE_ORIGIN}/`,
     },
   };
@@ -179,7 +179,7 @@ export function discussionForumPostingSchema(input: {
     url: canonicalUrl(input.url),
     author: { '@type': 'Person', name: input.author },
     commentCount: input.comments,
-    isPartOf: { '@type': 'CollectionPage', name: 'DotaCheats Community Forum', url: canonicalUrl('/forum/') },
+    isPartOf: { '@type': 'CollectionPage', name: 'Dota 2 Hacks Community Forum', url: canonicalUrl('/forum/') },
   };
 }
 
@@ -204,7 +204,7 @@ export function productSchema(input: {
   const prices = plans.map((plan) => plan.priceUsd);
   const low = prices.length ? Math.min(...prices) : undefined;
   const high = prices.length ? Math.max(...prices) : undefined;
-  const seller = { '@type': 'Organization', name: 'DotaCheats' };
+  const seller = { '@type': 'Organization', name: 'Dota 2 Hacks' };
   const offers =
     low != null && high != null && low !== high
       ? {
@@ -234,7 +234,7 @@ export function productSchema(input: {
     sku: input.sku ?? input.url.replace(/\//g, '-'),
     brand: {
       '@type': 'Brand',
-      name: 'DotaCheats',
+      name: 'Dota 2 Hacks',
     },
     ...(input.image ? { image: absoluteAssetUrl(openGraphImage(input.image).url) } : {}),
     offers,
@@ -278,11 +278,11 @@ export function articleSchema(input: {
     inLanguage: 'en-US',
     author: {
       '@type': 'Organization',
-      name: 'DotaCheats',
+      name: 'Dota 2 Hacks',
     },
     publisher: {
       '@type': 'Organization',
-      name: 'DotaCheats',
+      name: 'Dota 2 Hacks',
       logo: {
         '@type': 'ImageObject',
         url: `${SITE_ORIGIN}/logo.svg`,

@@ -1,5 +1,9 @@
 export interface SiteConfig {
   name: string;
+  /** Header/footer wordmark before accent color. */
+  logoPrefix: string;
+  /** Accent-colored part of the wordmark (e.g. “hacks”). */
+  logoAccent: string;
   domain: string;
   title: string;
   description: string;
