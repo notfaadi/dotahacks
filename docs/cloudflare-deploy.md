@@ -2,6 +2,8 @@
 
 Static Astro site → **`dist/`**.
 
+**Important:** Do not manually redeploy old commits (for example `ed9280e`) — they include `public/_redirects` with absolute URLs and will always fail Wrangler deploy. Deploy **latest `main`** only.
+
 ## Workers Builds — required settings
 
 | Setting | Value |

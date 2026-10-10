@@ -1,20 +1,29 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { spawnSync } from 'node:child_process';
 
 const root = process.cwd();
+
+function stripDistRedirectsBeforeExit(code = 0) {
+  spawnSync(process.execPath, [path.join(root, 'scripts/strip-dist-redirects.mjs')], {
+    cwd: root,
+    stdio: 'inherit',
+  });
+  process.exit(code);
+}
 const dist = path.join(root, 'dist');
 const key = process.env.INDEXNOW_KEY?.trim();
 const host = process.env.INDEXNOW_HOST?.trim() || 'dotacheats.com';
 
 if (!key) {
   console.log('IndexNow: skipped (INDEXNOW_KEY not set).');
-  process.exit(0);
+  stripDistRedirectsBeforeExit(0);
 }
 
 const sitemapPath = path.join(dist, 'sitemap.xml');
 if (!fs.existsSync(sitemapPath)) {
   console.warn('IndexNow: dist/sitemap.xml missing — skipping ping.');
-  process.exit(0);
+  stripDistRedirectsBeforeExit(0);
 }
 
 const sitemap = fs.readFileSync(sitemapPath, 'utf8');
@@ -22,7 +31,7 @@ const urlList = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => mat
 
 if (urlList.length === 0) {
   console.warn('IndexNow: no URLs found in sitemap.');
-  process.exit(0);
+  stripDistRedirectsBeforeExit(0);
 }
 
 const keyFile = path.join(dist, `${key}.txt`);
@@ -47,3 +56,5 @@ if (response.ok) {
   const body = await response.text();
   console.warn(`IndexNow: ping failed HTTP ${response.status}: ${body.slice(0, 200)}`);
 }
+
+stripDistRedirectsBeforeExit(0);
