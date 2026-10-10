@@ -3,12 +3,47 @@ import path from 'node:path';
 
 const root = process.cwd();
 const dist = path.join(root, 'dist');
-const source = path.join(dist, 'sitemap-0.xml');
 
-if (!fs.existsSync(source)) {
-  console.error('finalize-sitemap: dist/sitemap-0.xml not found — run astro build first.');
-  process.exit(1);
+/** Find sitemap-0.xml (static: dist/; Cloudflare adapter: dist/client/). */
+function findSitemapSource() {
+  const direct = path.join(dist, 'sitemap-0.xml');
+  if (fs.existsSync(direct)) return { file: direct, outDir: dist };
+
+  const client = path.join(dist, 'client', 'sitemap-0.xml');
+  if (fs.existsSync(client)) {
+    return { file: client, outDir: path.join(dist, 'client') };
+  }
+
+  if (!fs.existsSync(dist)) return null;
+
+  const stack = [dist];
+  while (stack.length) {
+    const dir = stack.pop();
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        stack.push(full);
+        continue;
+      }
+      if (entry.name === 'sitemap-0.xml') {
+        return { file: full, outDir: dir };
+      }
+    }
+  }
+  return null;
 }
+
+const located = findSitemapSource();
+if (!located) {
+  console.warn(
+    'finalize-sitemap: no sitemap-0.xml under dist/ — skipping (post-build step optional).',
+  );
+  process.exit(0);
+}
+
+const { file: source, outDir: distRoot } = located;
+
+const { SITE_URL } = await import('../src/config/site.ts');
 
 const raw = fs.readFileSync(source, 'utf8');
 const urlCount = (raw.match(/<url>/g) ?? []).length;
@@ -36,17 +71,17 @@ function formatUrlset(xml) {
 }
 
 const formatted = formatUrlset(raw);
-fs.writeFileSync(path.join(dist, 'sitemap.xml'), formatted, 'utf8');
+fs.writeFileSync(path.join(distRoot, 'sitemap.xml'), formatted, 'utf8');
 
 const indexXml = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://dotacheats.com/sitemap.xml</loc>
+    <loc>${SITE_URL}/sitemap.xml</loc>
     <lastmod>${new Date().toISOString().slice(0, 10)}</lastmod>
   </sitemap>
 </sitemapindex>
 `;
-fs.writeFileSync(path.join(dist, 'sitemap-index.xml'), indexXml, 'utf8');
-fs.writeFileSync(path.join(dist, 'sitemap-0.xml'), formatted, 'utf8');
+fs.writeFileSync(path.join(distRoot, 'sitemap-index.xml'), indexXml, 'utf8');
+fs.writeFileSync(path.join(distRoot, 'sitemap-0.xml'), formatted, 'utf8');
 
-console.log(`Sitemap finalized: ${urlCount} URLs → dist/sitemap.xml`);
+console.log(`Sitemap finalized: ${urlCount} URLs → ${path.relative(root, distRoot)}/sitemap.xml`);
