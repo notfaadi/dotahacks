@@ -15,8 +15,8 @@
     "astro": "astro",
     "optimize:images": "node scripts/optimize-images.mjs",
     "deploy:cloudflare": "npm run build && npm run cf:upload",
-    "cf:upload": "node scripts/strip-dist-redirects.mjs && wrangler deploy --config wrangler.toml",
-    "deploy": "npm run cf:upload",
+    "cf:upload": "node scripts/wrangler-deploy.mjs",
+    "deploy": "node scripts/wrangler-deploy.mjs",
     "postinstall": "node scripts/patch-wrangler-bin.mjs"
   },
   "dependencies": {

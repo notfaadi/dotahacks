@@ -1,12 +1,14 @@
-# Deploy on Cloudflare (dota2hacks)
+# Deploy on Cloudflare (dota2hacks.org)
 
-Static Astro site → **`dist/`**.
+Static Astro site → **`dist/`**. Git repo: **`notfaadi/dotahacks`**, Worker name: **`dotahacks`**.
+
+See **[CLOUDFLARE.md](../CLOUDFLARE.md)** for the dashboard copy-paste table.
 
 ## Site down after deleting the Worker
 
-1. Cloudflare dashboard → **Workers & Pages** → **Create** → connect **`notfaadi/dota2hacks`**, branch **`main`**.
+1. Cloudflare dashboard → **Workers & Pages** → **Create** → connect **`notfaadi/dotahacks`**, branch **`main`**.
 2. **Build command:** `npm run build`
-3. **Deploy command:** `node scripts/wrangler-deploy.mjs` (or `npm run deploy`)
+3. **Deploy command:** `npm run deploy` (runs `node scripts/wrangler-deploy.mjs`)
 4. Attach custom domain **`dota2hacks.org`** (and www redirect rule).
 5. Deploy **latest `main`** — not an old commit.
 
@@ -17,7 +19,7 @@ Static Astro site → **`dist/`**.
 | Setting | Value |
 |--------|--------|
 | **Build command** | `npm run build` |
-| **Deploy command** | `node scripts/wrangler-deploy.mjs` or `npm run cf:upload` |
+| **Deploy command** | `npm run deploy` |
 
 Do **not** use bare `npx wrangler deploy` — Wrangler may auto-run `astro add cloudflare` and fail the build.
 

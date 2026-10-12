@@ -1,6 +1,6 @@
 # Static Astro site — run `npm run build`, then `node scripts/wrangler-deploy.mjs` (not bare npx wrangler deploy).
 # Do not use `astro add cloudflare` (SSR); this project is fully static HTML in /dist.
-name = "dota2hacks"
+name = "dotahacks"
 compatibility_date = "2024-09-01"
 
 [assets]
