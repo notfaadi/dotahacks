@@ -2,6 +2,14 @@
 
 Static Astro site → **`dist/`**.
 
+## Site down after deleting the Worker
+
+1. Cloudflare dashboard → **Workers & Pages** → **Create** → connect **`notfaadi/dota2hacks`**, branch **`main`**.
+2. **Build command:** `npm run build`
+3. **Deploy command:** `node scripts/wrangler-deploy.mjs` (or `npm run deploy`)
+4. Attach custom domain **`dota2hacks.org`** (and www redirect rule).
+5. Deploy **latest `main`** — not an old commit.
+
 **Important:** Do not manually redeploy old commits (for example `ed9280e`) — they include `public/_redirects` with absolute URLs and will always fail Wrangler deploy. Deploy **latest `main`** only.
 
 ## Workers Builds — required settings

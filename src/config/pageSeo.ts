@@ -32,6 +32,18 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
       'Compare undetected Dota 2 hacks and cheats—aimbot-style prediction, ESP, maphack, scripts, auto-combo, and skin tools. Download premium tiers for Steam ranked.',
     keywords: joinKeywords(KEYWORD_GROUPS.core, KEYWORD_GROUPS.features, KEYWORD_GROUPS.intent),
   },
+  '/products/dota-2-cheats/lite/': {
+    title: `Dota 2 Lite Hacks ${SEO_YEAR} | Entry Scripts & ESP`,
+    description:
+      'Lite Dota 2 hacks tier: core ESP, map awareness, and starter scripts for ranked—upgrade path to Pro and Elite undetected cheats.',
+    keywords: joinKeywords(KEYWORD_GROUPS.intent, ['dota 2 lite hacks', 'dota 2 free hacks']),
+  },
+  '/products/dota-2-cheats/pro/': {
+    title: `Dota 2 Pro Hacks ${SEO_YEAR} | Advanced Scripts & Maphack`,
+    description:
+      'Pro Dota 2 hacks with expanded maphack, combo scripts, and ranked presets—balanced undetected cheat tier between Lite and Elite.',
+    keywords: joinKeywords(KEYWORD_GROUPS.intent, ['dota 2 pro hacks', 'dota 2 premium hacks']),
+  },
   '/products/dota-2-cheats/elite/': {
     title: `Best Dota 2 Elite Hacks ${SEO_YEAR} | Premium Cheats Download`,
     description:

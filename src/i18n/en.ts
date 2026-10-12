@@ -648,7 +648,7 @@ export const en: Translations = {
     tagline: `Dota 2 hacks & dota cheats — aimbot-style scripts, ESP, maphack for Steam ranked. ${SITE_DOMAIN}`,
     explore: 'Explore',
     exploreLinks: [
-      { href: '/', label: 'Dota 2 hacks overview', ariaLabel: 'Dota 2 hacks', scrollTarget: 'dota-hacks-topics' },
+      { href: '/#dota-hacks-topics', label: 'Dota 2 hacks overview', ariaLabel: 'Dota 2 hacks' },
       { href: '/products/dota-2-cheats/', label: 'Dota 2 cheats download', ariaLabel: 'Dota 2 cheats' },
       { href: '/blog/dota-2-map-hack-setup/', label: 'Dota 2 maphack & ESP', ariaLabel: 'Maphack guide' },
       { href: '/blog/dota-2-scripts-ranked-mmr/', label: 'Dota 2 aimbot & scripts', ariaLabel: 'Aimbot scripts' },
@@ -662,9 +662,9 @@ export const en: Translations = {
   },
   legalPages: {
     about: {
-      title: 'About DotaCheats',
+      title: 'About Dota 2 Hacks',
       description:
-        'DotaCheats provides Dota 2 cheat tiers, utility tools and PC support resources at dotacheats.com.',
+        'Dota 2 Hacks publishes cheat tiers, utility tools, and PC support resources for Steam ranked players.',
       sections: [
         {
           heading: 'Who we are',

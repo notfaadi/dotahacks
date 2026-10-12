@@ -12,6 +12,14 @@ export const CHECKOUT_URLS = {
 
 /** Checkout paths → external product URLs (used by Node serve + Astro middleware). */
 /** Dota 2 uses `src/pages/go/dota-2/` (instant JS redirect) + direct affiliate hrefs on Buy now. */
+/** Static `/go/[slug]/` pages (Workers static assets — middleware does not run in production). */
+export const GO_SLUG_DESTINATIONS = {
+  'dota-2': ZADEYO_DOTA2_AFFILIATE,
+  'skin-changer': CHECKOUT_URLS.skinChanger,
+  'hwid-spoofer': CHECKOUT_URLS.hwidSpoofer,
+  ugc: CHECKOUT_URLS.ugc,
+};
+
 export const CHECKOUT_PATH_REDIRECTS = new Map([
   ['/go/skin-changer', CHECKOUT_URLS.skinChanger],
   ['/go/skin-changer/', CHECKOUT_URLS.skinChanger],

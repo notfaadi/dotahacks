@@ -1,7 +1,10 @@
 ---
-import { ZADEYO_DOTA2_AFFILIATE } from '../../../config/checkout-redirects.mjs';
+interface Props {
+  destination: string;
+  linkLabel?: string;
+}
 
-const destination = ZADEYO_DOTA2_AFFILIATE;
+const { destination, linkLabel = 'Continue to checkout' } = Astro.props;
 ---
 
 <!doctype html>
@@ -19,7 +22,7 @@ const destination = ZADEYO_DOTA2_AFFILIATE;
   </head>
   <body>
     <p>
-      <a href={destination}>Continue to Zadeyo checkout</a>
+      <a href={destination} rel="noopener noreferrer">{linkLabel}</a>
     </p>
   </body>
 </html>

@@ -21,8 +21,15 @@ const {
   "data-slot": dataSlot = "button",
   tabindex,
   class: className,
+  target: targetProp,
+  rel: relProp,
   ...rest
 } = Astro.props;
+
+const isExternal =
+  typeof href === "string" && (href.startsWith("http://") || href.startsWith("https://"));
+const target = targetProp ?? (isExternal ? "_blank" : undefined);
+const rel = relProp ?? (isExternal ? "noopener noreferrer" : undefined);
 ---
 
 {
@@ -32,6 +39,8 @@ const {
       href={disabled ? undefined : href}
       aria-disabled={disabled ? "true" : undefined}
       data-disabled={disabled ? "" : undefined}
+      target={target}
+      rel={rel}
       {...rest}
       tabindex={disabled ? -1 : tabindex}
       data-slot={dataSlot}

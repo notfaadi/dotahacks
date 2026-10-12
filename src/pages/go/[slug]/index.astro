@@ -1,0 +1,19 @@
+---
+import GoCheckoutRedirect from '../../../components/GoCheckoutRedirect.astro';
+import { GO_SLUG_DESTINATIONS } from '../../../config/checkout-redirects.mjs';
+
+export function getStaticPaths() {
+  return Object.entries(GO_SLUG_DESTINATIONS).map(([slug, destination]) => ({
+    params: { slug },
+    props: { destination },
+  }));
+}
+
+interface Props {
+  destination: string;
+}
+
+const { destination } = Astro.props;
+---
+
+<GoCheckoutRedirect destination={destination} linkLabel="Continue to Zadeyo checkout" />

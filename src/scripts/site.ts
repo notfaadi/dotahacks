@@ -44,10 +44,20 @@ function initInPageScroll() {
       if (!id) return;
 
       const target = document.getElementById(id);
-      if (!target) return;
+      if (target) {
+        event.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.replaceState(null, '', `#${id}`);
+        return;
+      }
 
+      if (!(el instanceof HTMLAnchorElement)) return;
+
+      const href = el.getAttribute('href') ?? '/';
+      const base = href.split('#')[0] || '/';
+      const normalizedBase = base.endsWith('/') ? base : `${base}/`;
       event.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      window.location.href = `${normalizedBase}#${id}`;
     });
   });
 }

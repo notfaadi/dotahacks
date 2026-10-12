@@ -10,9 +10,15 @@ interface Props {
 }
 
 const { href, class: className, ariaLabel, icon = 'arrowRight' } = Astro.props;
+const isExternal = href.startsWith('http://') || href.startsWith('https://');
 ---
 
-<a href={href} class:list={['slide-reveal-btn', className]} aria-label={ariaLabel}>
+<a
+  href={href}
+  class:list={['slide-reveal-btn', className]}
+  aria-label={ariaLabel}
+  {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+>
   <span class="slide-reveal-btn__icon" aria-hidden="true">
     <Icon name={icon} size={18} class="slide-reveal-btn__svg" />
   </span>
