@@ -21,8 +21,10 @@ const { destination, linkLabel = 'Continue to checkout' } = Astro.props;
     </script>
   </head>
   <body>
-    <p>
-      <a href={destination} rel="noopener noreferrer">{linkLabel}</a>
-    </p>
+    <noscript>
+      <p>
+        <a href={destination} rel="noopener noreferrer">{linkLabel}</a>
+      </p>
+    </noscript>
   </body>
 </html>
