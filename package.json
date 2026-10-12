@@ -6,7 +6,8 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --host 127.0.0.1 --port 4321",
+    "local": "astro dev --host 127.0.0.1 --port 4321",
     "build": "node scripts/prepare-dist.mjs && node scripts/strip-dist-redirects.mjs && node scripts/optimize-images.mjs && astro build && node scripts/prune-dist-images.mjs && node scripts/finalize-sitemap.mjs && node scripts/indexnow.mjs",
     "postbuild": "node scripts/strip-dist-redirects.mjs",
     "preview": "astro preview --host 0.0.0.0",

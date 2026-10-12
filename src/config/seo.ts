@@ -10,7 +10,7 @@ export const DEFAULT_OG_IMAGE = '/images/gameplay/dota-2-map-hack.png';
 
 export const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID as string | undefined;
 
-/** @example @dotacheats */
+/** @example @dota2hacks */
 export const TWITTER_SITE = import.meta.env.PUBLIC_TWITTER_SITE as string | undefined;
 
 export const TWITTER_CREATOR = import.meta.env.PUBLIC_TWITTER_CREATOR as string | undefined;

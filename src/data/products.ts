@@ -96,7 +96,7 @@ const defaultAcquisitionSteps: AcquisitionStep[] = [
   {
     num: '01',
     title: 'Review current status',
-    desc: 'Check the live banner on dotacheats.com and Discord #status before purchase—especially after a Dota 2 or VAC update.',
+    desc: 'Check the live banner on dota2hacks.org and Discord #status before purchase—especially after a Dota 2 or VAC update.',
   },
   {
     num: '02',
@@ -123,7 +123,7 @@ function acquisitionFor(productName: string): ProductAcquisition {
 }
 
 const sharedGoodToKnow =
-  'Dota 2 and VAC receive frequent updates. Confirm module availability on the live status panel at dotacheats.com before you purchase or launch. Overlay behavior may differ in lobbies, replays and spectator mode after patches.';
+  'Dota 2 and VAC receive frequent updates. Confirm module availability on the live status panel at dota2hacks.org before you purchase or launch. Overlay behavior may differ in lobbies, replays and spectator mode after patches.';
 
 const sharedLimitations =
   'Third-party software in Dota 2 can violate Valve Terms of Use and lead to VAC bans or account action. You use this software at your own risk. Compatibility and availability can change after game, VAC, or Windows updates without notice.';
@@ -260,7 +260,7 @@ const tierBodies: Record<string, ProductPage['body']> = {
     { type: 'h2', text: 'Recommended pairing' },
     {
       type: 'p',
-      text: 'Pro is the most popular tier at dotacheats.com—enough firepower for high-MMR lobbies without Elite slot limits. Pair with our scripts guide in the blog before your first ranked session.',
+      text: 'Pro is the most popular tier at dota2hacks.org—enough firepower for high-MMR lobbies without Elite slot limits. Pair with our scripts guide in the blog before your first ranked session.',
     },
   ],
   elite: [
@@ -345,7 +345,7 @@ const productContent: Record<
       title: 'Built around a clear Dota 2 awareness workflow',
       paragraphs: [
         'Dota 2 Lite focuses on hero ESP, ward locator, rune timers and zoom hack—everything you need to track ganks and map control without script automation. Modules are grouped in the portal so you can tune distance, colors, and stream-proof mode before your first queue.',
-        'Lite is the entry path for ranked and Turbo players who want map awareness with minimal report risk. No Auto Combo, no bots—just readable overlays maintained every patch at dotacheats.com.',
+        'Lite is the entry path for ranked and Turbo players who want map awareness with minimal report risk. No Auto Combo, no bots—just readable overlays maintained every patch at dota2hacks.org.',
       ],
     },
   },
@@ -408,7 +408,7 @@ const productContent: Record<
       title: 'Built around a full Dota 2 operator workflow',
       paragraphs: [
         'Dota 2 Elite is the private build with Auto Farm Bot, Auto Kill Steal, Auto Dagon, Skin Changer, full map hack and priority patch delivery. Every Lite and Pro module is included—no caps, no upsells inside the loader.',
-        'Elite slots are limited so patch cycles stay fast and builds stay maintainable. Direct dev support in Discord helps you tune conservative profiles before ranked. Check the status banner on dotacheats.com before purchase.',
+        'Elite slots are limited so patch cycles stay fast and builds stay maintainable. Direct dev support in Discord helps you tune conservative profiles before ranked. Check the status banner on dota2hacks.org before purchase.',
       ],
     },
   },
@@ -440,7 +440,7 @@ const productContent: Record<
       title: 'Built around a clear hardware recovery workflow',
       paragraphs: [
         'The HWID Spoofer helps Dota 2 players recover when VAC flags PC hardware but the Steam account is still clean. Disk and MAC profile tools ship with a restore-point checklist, compatibility scan, and post-spoof verification steps.',
-        'Use this path when fresh accounts fail instantly on one machine but work elsewhere—not for account-only VAC cases. After spoof, load a conservative cheat profile from dotacheats.com before queuing ranked.',
+        'Use this path when fresh accounts fail instantly on one machine but work elsewhere—not for account-only VAC cases. After spoof, load a conservative cheat profile from dota2hacks.org before queuing ranked.',
       ],
     },
   },
@@ -451,7 +451,7 @@ const productContent: Record<
     limitations:
       'UGC does not guarantee account restoration. Results vary by case type. Permanent VAC bans may require a new account path instead of appeal.',
     systemRequirements: [
-      { icon: 'reqMailOrder', text: 'Order email used at checkout on dotacheats.com or at checkout on dotacheats.com.' },
+      { icon: 'reqMailOrder', text: 'Order email used at checkout on dota2hacks.org or at checkout on dota2hacks.org.' },
       { icon: 'reqShieldAccount', text: 'Account details and ban or restriction notification if available.' },
       { icon: 'reqWifiPortal', text: 'Internet access for Discord support and case dashboard.' },
     ],

@@ -99,7 +99,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'setup',
     icon: 'faqStatus',
     q: 'Where do I check if Dota 2 cheats are online?',
-    a: a('The live status banner is on dotacheats.com and in the Discord #status channel. Always check after a Dota 2 or VAC update.'),
+    a: a('The live status banner is on dota2hacks.org and in the Discord #status channel. Always check after a Dota 2 or VAC update.'),
   },
   {
     id: 'after-buy',
@@ -232,7 +232,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'products',
     icon: 'faqExternalLoader',
     q: 'Is the loader injected into the Steam folder?',
-    a: `DotaCheats runs external with cloud config sync—no files injected into the Dota 2 directory. VAC risk still applies. See ${productsHub}.`,
+    a: `Dota 2 Hacks runs external with cloud config sync—no files injected into the Dota 2 directory. VAC risk still applies. See ${productsHub}.`,
   },
   {
     id: 'blog-vs-cheats',
@@ -268,7 +268,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'plans',
     icon: 'faqWhoPro',
     q: 'Who should buy Pro?',
-    a: `Ranked players who want Auto Combo, Orbwalker and Activator with map hack included. Pro is the most popular tier at dotacheats.com.`,
+    a: `Ranked players who want Auto Combo, Orbwalker and Activator with map hack included. Pro is the most popular tier at dota2hacks.org.`,
     scopes: ['pro'],
   },
   {
@@ -284,7 +284,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'safety',
     icon: 'faqVacUpdate',
     q: 'What should I do after a VAC update?',
-    a: a('Check dotacheats.com status and Discord #status. Do not launch until the banner shows online. Load conservative presets after any patch.'),
+    a: a('Check dota2hacks.org status and Discord #status. Do not launch until the banner shows online. Load conservative presets after any patch.'),
   },
   {
     id: 'discord-help',
@@ -321,7 +321,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'safety',
     icon: 'faqPrivateCheats',
     q: 'What are private Dota 2 cheats?',
-    a: a('Private means per-user keys and maintained builds—not public zip packs. DotaCheats ships portal delivery for ESP, scripts and map hack tiers.'),
+    a: a('Private means per-user keys and maintained builds—not public zip packs. Dota 2 Hacks ships portal delivery for ESP, scripts and map hack tiers.'),
   },
   {
     id: 'faq-more',
@@ -423,7 +423,7 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       topic: 'blog',
       icon: 'faqBlogGuideStart',
       q: 'Should I use console cheat codes in ranked?',
-      a: a('No. Valve lobby cheat codes only work in custom games with cheats enabled. Ranked requires separate dota cheats from dotacheats.com tiers.'),
+      a: a('No. Valve lobby cheat codes only work in custom games with cheats enabled. Ranked requires separate dota cheats from dota2hacks.org tiers.'),
     },
     {
       id: 'blog-guide-tier',

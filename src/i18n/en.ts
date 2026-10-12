@@ -1,6 +1,6 @@
 import type { Translations } from './types';
 import { PRIMARY_CHECKOUT_PATH } from '../config/checkout';
-import { PRODUCT_BASE, SEO_YEAR, SITE_DOMAIN, TITLE_PREFIX } from '../config/site';
+import { PRODUCT_BASE, SEO_YEAR, SITE_DOMAIN, SUPPORT_EMAIL, TITLE_PREFIX } from '../config/site';
 
 const productBase = PRODUCT_BASE;
 
@@ -184,7 +184,7 @@ export const en: Translations = {
     eyebrow: 'Free vs premium',
     title: 'Free vs Premium Dota 2 Cheats',
     subtitle:
-      'Most dota 2 cheat shops ship stale loaders, obvious automation, and ticket bots. We built dotacheats.com around patch-day delivery, humanized scripts, and live operators.',
+      'Most dota 2 cheat shops ship stale loaders, obvious automation, and ticket bots. We built dota2hacks.org around patch-day delivery, humanized scripts, and live operators.',
     usLabel: 'Dota 2 Hacks',
     otherLabel: 'Typical provider',
     rows: [
@@ -227,7 +227,7 @@ export const en: Translations = {
       {
         value: '300+',
         title: 'Active operators',
-        desc: 'Steam PC players running scripts, map hack and utilities on dotacheats.com.',
+        desc: 'Steam PC players running scripts, map hack and utilities on dota2hacks.org.',
       },
     ],
   },
@@ -455,7 +455,7 @@ export const en: Translations = {
         title: 'HWID spoofer vs new account after a VAC ban',
         slug: 'dota-2-hwid-spoofer-after-ban',
         image: '/images/blog/dota-2-hwid-spoofer-after-ban.png',
-        desc: 'When to spoof hardware, when to start fresh, and how dotacheats.com/products/dota-2-cheats fits each path.',
+        desc: 'When to spoof hardware, when to start fresh, and how dota2hacks.org/products/dota-2-cheats fits each path.',
         date: 'Aug 13, 2026',
         readTime: '7 min read',
       },
@@ -535,7 +535,7 @@ export const en: Translations = {
         num: '01',
         phase: 'Before purchase',
         title: 'Check VAC status',
-        desc: 'Read the live banner on dotacheats.com before you buy or launch.',
+        desc: 'Read the live banner on dota2hacks.org before you buy or launch.',
       },
       {
         num: '02',
@@ -582,8 +582,8 @@ export const en: Translations = {
         icon: 'headphones',
         title: 'Chat to support',
         desc: "We're here for loader, HWID and account issues.",
-        linkLabel: 'support@dotacheats.com',
-        href: 'mailto:support@dotacheats.com',
+        linkLabel: SUPPORT_EMAIL,
+        href: `mailto:${SUPPORT_EMAIL}`,
       },
       {
         icon: 'navFaq',
@@ -602,7 +602,7 @@ export const en: Translations = {
     ],
     ticketTitle: 'Include in your ticket',
     ticketItems: [
-      { title: 'Order email', desc: 'The address used at checkout on dotacheats.com or via our secure checkout.' },
+      { title: 'Order email', desc: 'The address used at checkout on dota2hacks.org or via our secure checkout.' },
       { title: 'Platform', desc: 'Steam on Windows 10 or 11—and your Dota 2 client version.' },
       { title: 'Error detail', desc: 'Screenshot or exact message from the loader or Steam.' },
     ],
@@ -615,7 +615,7 @@ export const en: Translations = {
       {
         num: '01',
         q: 'Where do I check if Dota 2 cheats are online?',
-        a: 'The live status banner is on dotacheats.com and in the Discord #status channel. Always check after a Dota 2 or VAC update.',
+        a: 'The live status banner is on dota2hacks.org and in the Discord #status channel. Always check after a Dota 2 or VAC update.',
       },
       {
         num: '02',
@@ -640,7 +640,7 @@ export const en: Translations = {
       {
         num: '06',
         q: 'Where are products and utilities listed?',
-        a: 'Cheat tiers, HWID Spoofer, UGC and Skin Changer live at dotacheats.com/products/dota-2-cheats with feature lists and checkout via our partner.',
+        a: 'Cheat tiers, HWID Spoofer, UGC and Skin Changer live at dota2hacks.org/products/dota-2-cheats with feature lists and checkout via our partner.',
       },
     ],
   },
@@ -669,7 +669,7 @@ export const en: Translations = {
         {
           heading: 'Who we are',
           paragraphs: [
-            'DotaCheats is a PC-focused resource for Dota 2 players exploring scripts, map hack, zoom hack and Skin Changer workflows. We publish tier comparisons, setup guides, and live status notes so you can evaluate dota cheats before checkout.',
+            'Dota 2 Hacks is a PC-focused resource for Dota 2 players exploring scripts, map hack, zoom hack and Skin Changer workflows. We publish tier comparisons, setup guides, and live status notes so you can evaluate dota cheats before checkout.',
             'All product names are used for identification only.',
           ],
         },
@@ -691,12 +691,12 @@ export const en: Translations = {
     privacy: {
       title: 'Privacy Policy',
       description:
-        'How DotaCheats handles analytics, cookies, and contact data when you use dotacheats.com.',
+        'How Dota 2 Hacks handles analytics, cookies, and contact data when you use dota2hacks.org.',
       sections: [
         {
           heading: 'Information we collect',
           paragraphs: [
-            'We may collect standard web analytics such as page views, device type, browser, and approximate region through Google Analytics when enabled. Checkout and license delivery happen on external checkout pages—we do not store payment card data on dotacheats.com.',
+            'We may collect standard web analytics such as page views, device type, browser, and approximate region through Google Analytics when enabled. Checkout and license delivery happen on external checkout pages—we do not store payment card data on dota2hacks.org.',
           ],
         },
         {
@@ -722,12 +722,12 @@ export const en: Translations = {
     terms: {
       title: 'Terms & Conditions',
       description:
-        'Purchase, license, refund, and use terms for DotaCheats products and dotacheats.com.',
+        'Purchase, license, refund, and use terms for Dota 2 Hacks products and dota2hacks.org.',
       sections: [
         {
           heading: 'Agreement',
           paragraphs: [
-            'Last updated: September 2026. By using dotacheats.com or completing checkout for any product listed here, you agree to these Terms & Conditions and our Privacy Policy.',
+            'Last updated: September 2026. By using dota2hacks.org or completing checkout for any product listed here, you agree to these Terms & Conditions and our Privacy Policy.',
           ],
         },
         {
@@ -740,7 +740,7 @@ export const en: Translations = {
         {
           heading: 'Checkout and delivery',
           paragraphs: [
-            'Payment and license delivery run on external checkout pages. dotacheats.com does not process or store payment card numbers.',
+            'Payment and license delivery run on external checkout pages. dota2hacks.org does not process or store payment card numbers.',
             'After purchase, use the operator portal linked from your order flow to download the current loader and setup guide before launching Dota 2.',
           ],
         },
@@ -780,9 +780,9 @@ export const en: Translations = {
       ],
     },
     support: {
-      title: 'DotaCheats Support',
+      title: 'Dota 2 Hacks Support',
       description:
-        'Get support for loader, HWID, and checkout questions at dotacheats.com.',
+        'Get support for loader, HWID, and checkout questions at dota2hacks.org.',
     },
   },
   ui: {
@@ -791,7 +791,7 @@ export const en: Translations = {
     browseCheatsMobile: 'Start checkout',
     homeAria: 'Dota 2 Hacks home',
     checkoutAria: 'Start checkout',
-    discordAria: 'Join DotaCheats on Discord',
+    discordAria: 'Start checkout for Dota 2 Hacks',
     menuOpen: 'Open menu',
     menuClose: 'Close menu',
     themeLight: 'Switch to light mode',

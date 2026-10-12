@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
+import { readSiteDomain } from './read-site-domain.mjs';
 
 const root = process.cwd();
 
@@ -13,7 +14,7 @@ function stripDistRedirectsBeforeExit(code = 0) {
 }
 const dist = path.join(root, 'dist');
 const key = process.env.INDEXNOW_KEY?.trim();
-const host = process.env.INDEXNOW_HOST?.trim() || 'dotacheats.com';
+const host = process.env.INDEXNOW_HOST?.trim() || readSiteDomain();
 
 if (!key) {
   console.log('IndexNow: skipped (INDEXNOW_KEY not set).');

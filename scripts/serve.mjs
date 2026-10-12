@@ -4,8 +4,9 @@ import path from 'node:path';
 import zlib from 'node:zlib';
 import { resolvePathRedirect } from './redirects.mjs';
 import { resolveCheckoutPathRedirect } from '../src/config/checkout-redirects.mjs';
+import { readSiteDomain } from './read-site-domain.mjs';
 
-const CANONICAL_HOST = 'dotacheats.com';
+const CANONICAL_HOST = readSiteDomain();
 const distDir = path.resolve('dist');
 const port = Number(process.env.PORT) || 3000;
 
