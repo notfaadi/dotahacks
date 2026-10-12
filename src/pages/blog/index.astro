@@ -115,7 +115,12 @@ const tagIcon = (tag: string): IconName => blogTagIcons[tag] ?? 'tag';
         ))}
       </div>
 
-      <p id="blog-empty" class="mt-10 hidden text-center text-muted-foreground" role="status">
+      <p
+        id="blog-empty"
+        class="mt-10 hidden text-center text-muted-foreground"
+        role="status"
+        data-message={t.blog.emptyFilter}
+      >
         {t.blog.emptyFilter}
       </p>
 
@@ -128,13 +133,4 @@ const tagIcon = (tag: string): IconName => blogTagIcons[tag] ?? 'tag';
     </div>
   </section>
 
-  <script define:vars={{ emptyMessage: t.blog.emptyFilter }}>
-    import { initBlogIndexFilters } from '../../scripts/blog-index.ts';
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', () => initBlogIndexFilters(emptyMessage));
-    } else {
-      initBlogIndexFilters(emptyMessage);
-    }
-  </script>
 </BaseLayout>

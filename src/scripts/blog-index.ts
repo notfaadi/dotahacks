@@ -14,7 +14,7 @@ export function initBlogIndexFilters(emptyMessage: string) {
       'data-blog-filter',
     ) ?? 'all';
 
-  const getSortSelectRoot = () => sortRoot?.querySelector<HTMLElement>('[data-sw-select]');
+  const getSortSelectRoot = () => sortRoot?.querySelector<HTMLElement>('[data-sw-select]') ?? null;
 
   const getSort = () => {
     const root = getSortSelectRoot();
@@ -22,12 +22,6 @@ export function initBlogIndexFilters(emptyMessage: string) {
     if (fromAttr) return fromAttr;
     const input = sortRoot?.querySelector<HTMLInputElement>('[data-sw-select-input]');
     return input?.value || 'newest';
-  };
-
-  const isBlogSortEvent = (event: Event) => {
-    const root = getSortSelectRoot();
-    if (!root || !sortRoot) return false;
-    return event.target === root || root.contains(event.target as Node);
   };
 
   const compareCards = (a: HTMLElement, b: HTMLElement, sort: string) => {
@@ -51,7 +45,8 @@ export function initBlogIndexFilters(emptyMessage: string) {
 
     let visibleCount = 0;
     items.forEach((el) => {
-      const match = tag === 'all' || el.getAttribute('data-tag') === tag;
+      const cardTag = el.getAttribute('data-tag') ?? '';
+      const match = tag === 'all' || cardTag === tag;
       el.classList.toggle('hidden', !match);
       if (match) visibleCount += 1;
     });
@@ -71,13 +66,24 @@ export function initBlogIndexFilters(emptyMessage: string) {
   });
 
   const onSortChange = (event: Event) => {
-    if (!isBlogSortEvent(event)) return;
+    const target = event.target;
+    if (!(target instanceof Node)) return;
+    if (!sortRoot?.contains(target)) return;
     apply();
   };
 
   document.addEventListener('starwind:value-change', onSortChange);
 
-  // Starwind select hydrates after first paint — re-apply once ready.
-  requestAnimationFrame(apply);
-  window.setTimeout(apply, 0);
+  const selectRoot = getSortSelectRoot();
+  const hiddenInput = sortRoot?.querySelector<HTMLInputElement>('[data-sw-select-input]');
+  hiddenInput?.addEventListener('change', apply);
+
+  if (selectRoot) {
+    const observer = new MutationObserver(() => apply());
+    observer.observe(selectRoot, { attributes: true, attributeFilter: ['data-value'] });
+  }
+
+  apply();
+  window.setTimeout(apply, 100);
+  document.addEventListener('starwind:init', () => window.setTimeout(apply, 0));
 }

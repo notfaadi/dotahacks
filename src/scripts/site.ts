@@ -111,6 +111,16 @@ function initThemeMetaColor() {
   observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
 }
 
+async function initBlogIndexPage() {
+  const grid = document.getElementById('blog-grid');
+  if (!grid) return;
+  const emptyEl = document.getElementById('blog-empty');
+  const emptyMessage =
+    emptyEl?.getAttribute('data-message')?.trim() || 'No articles match this filter.';
+  const { initBlogIndexFilters } = await import('./blog-index.ts');
+  initBlogIndexFilters(emptyMessage);
+}
+
 function bootSite() {
   initFonts();
   initFaqFilters();
@@ -118,6 +128,7 @@ function bootSite() {
   initInPageScroll();
   initSkipLink();
   initThemeMetaColor();
+  void initBlogIndexPage();
 }
 
 if (document.readyState === 'loading') {
