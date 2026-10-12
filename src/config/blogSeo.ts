@@ -120,6 +120,126 @@ export const BLOG_SEO: Record<string, BlogSeoEntry> = {
       'Stream-proof setup for Dota 2 hacks—hide ESP and maphack from OBS while keeping undetected scripts on your monitor for ranked.',
     keywords: joinKeywords(KEYWORD_GROUPS.features, ['dota 2 stream proof', 'working dota 2 cheats']),
   },
+  'dota-2-hacks-october-2026-update': {
+    title: `Dota 2 Hacks Update ${SEO_YEAR} | ESP & Map Hack Patch`,
+    description:
+      'October 2026 dota2hacks.org update—Hero ESP, fog removal, rune timers, auto-dodge caps, and loader stability on Windows 10 and 11.',
+    keywords: joinKeywords(KEYWORD_GROUPS.intent, ['dota 2 hack update', 'dota 2 cheats 2026']),
+  },
+  'best-dota-2-hacks-cheats-2026': {
+    title: `Best Dota 2 Hacks & Cheats ${SEO_YEAR} | dota2hacks.org`,
+    description:
+      'Best dota hacks cheats in 2026—twelve core modules, Lite vs Pro vs Elite, external loader, and patch-day maintenance for ranked Steam PC.',
+    keywords: joinKeywords(KEYWORD_GROUPS.intent, ['best dota hacks cheats', 'best dota 2 cheats']),
+  },
+  'dota-2-loader-hvci-core-isolation-fix': {
+    title: `Dota 2 Loader HVCI Fix ${SEO_YEAR} | Core Isolation`,
+    description:
+      'Fix dota2hacks.org loader errors with HVCI, Core Isolation, TPM, and Secure Boot enabled on Windows 10 and 11—without disabling VAC-safe security.',
+    keywords: joinKeywords(KEYWORD_GROUPS.safety, ['dota 2 cheat loader', 'dota 2 hack not working']),
+  },
+  'dota-2-cheat-overlay-lag-fix': {
+    title: `Dota 2 ESP Lag Fix ${SEO_YEAR} | Performance Hacks`,
+    description:
+      'Stop Hero ESP and map hack stutter—Performance optimized presets, GPU settings, and portal profiles for dota2hacks.org overlays.',
+    keywords: joinKeywords(KEYWORD_GROUPS.features, ['dota 2 esp hack', 'dota 2 maphack lag']),
+  },
+  'dota-2-hero-esp-items-level-guide': {
+    title: `Dota 2 Hero ESP Guide ${SEO_YEAR} | Items & Level`,
+    description:
+      'Hero ESP with items and level—ranked tuning for the best dota hacks cheats awareness stack on Lite, Pro, and Elite at dota2hacks.org.',
+    keywords: joinKeywords(KEYWORD_GROUPS.features, ['dota 2 esp hack', 'dota 2 wallhack']),
+  },
+  'dota-2-full-map-hack-remove-fog-guide': {
+    title: `Dota 2 Map Hack Fog Removal ${SEO_YEAR} | Guide`,
+    description:
+      'Full map hack remove fog of war—pair rune timers, ward ESP, and performance caps for undetected ranked play on dota2hacks.org.',
+    keywords: joinKeywords(KEYWORD_GROUPS.features, ['dota 2 map hack', 'dota 2 remove fog']),
+  },
+  'dota-2-ability-cooldown-tracker-guide': {
+    title: `Dota 2 Cooldown Tracker ${SEO_YEAR} | ESP Hacks`,
+    description:
+      'Ability cooldown tracker for dota2hacks.org—ult timing and ranked awareness with the best dota hacks cheats module stack.',
+    keywords: joinKeywords(KEYWORD_GROUPS.features, ['dota 2 esp hack', 'dota 2 cooldown hack']),
+  },
+  'dota-2-auto-dodge-skillshots-guide': {
+    title: `Dota 2 Auto Dodge ${SEO_YEAR} | Skillshot Hacks`,
+    description:
+      'Auto-dodge skillshots on Pro and Elite—humanized ranked caps and Turbo presets for dota2hacks.org scripts and cheats.',
+    keywords: joinKeywords(KEYWORD_GROUPS.features, ['dota 2 dodge script', 'dota 2 hack tool']),
+  },
+  'dota-2-ward-placement-esp-guide': {
+    title: `Dota 2 Ward ESP ${SEO_YEAR} | Maphack Guide`,
+    description:
+      'Ward placement ESP with observer and sentry icons—best dota hacks cheats vision on dota2hacks.org Lite and Pro tiers.',
+    keywords: joinKeywords(KEYWORD_GROUPS.features, ['dota 2 ward hack', 'dota 2 maphack']),
+  },
+  'dota-2-loader-september-2026-update': {
+    title: `Dota 2 Loader Update Sep ${SEO_YEAR} | Stability`,
+    description:
+      'September 2026 dota2hacks.org loader stability—ESP sync, cloud configs, and Windows 10/11 security baseline.',
+    keywords: joinKeywords(KEYWORD_GROUPS.intent, ['dota 2 hack update', 'dota 2 cheats download']),
+  },
+  'dota-2-ranked-preset-refresh-2026': {
+    title: `Dota 2 Ranked Presets ${SEO_YEAR} | Safe Hacks`,
+    description:
+      'Ranked preset refresh for Lite, Pro, and Elite—conservative ESP and script delays on dota2hacks.org.',
+    keywords: joinKeywords(KEYWORD_GROUPS.safety, ['dota 2 ranked hacks', 'best dota 2 cheats']),
+  },
+  'dota-2-windows-11-security-baseline-update': {
+    title: `Dota 2 Loader Security ${SEO_YEAR} | HVCI & TPM`,
+    description:
+      'Windows 11 security baseline for dota2hacks.org—HVCI, Core Isolation, TPM, and Secure Boot ON with cheats.',
+    keywords: joinKeywords(KEYWORD_GROUPS.safety, ['dota 2 hack safe', 'dota 2 cheat loader']),
+  },
+  'dota-2-loader-secure-boot-tpm-fix': {
+    title: `Secure Boot & TPM Fix ${SEO_YEAR} | Dota 2 Loader`,
+    description:
+      'Fix Secure Boot and TPM loader errors for dota2hacks.org on Windows 10 and 11 before running ESP and map hack.',
+    keywords: joinKeywords(KEYWORD_GROUPS.safety, ['dota 2 hack not working', 'dota 2 loader fix']),
+  },
+  'dota-2-portal-login-download-fix': {
+    title: `Dota 2 Portal Login Fix ${SEO_YEAR} | Download`,
+    description:
+      'Fix operator portal login and loader download issues after buying best dota hacks cheats at dota2hacks.org.',
+    keywords: joinKeywords(KEYWORD_GROUPS.intent, ['dota 2 hack download', 'dota 2 mod menu']),
+  },
+  'dota-2-black-screen-overlay-fix': {
+    title: `Dota 2 Black Screen Fix ${SEO_YEAR} | Overlay ESP`,
+    description:
+      'Fix black screen and invisible ESP overlays—display mode, GPU, and loader order for dota2hacks.org cheats.',
+    keywords: joinKeywords(KEYWORD_GROUPS.safety, ['dota 2 esp not working', 'dota 2 hack overlay']),
+  },
+  'dota-2-rune-spawn-indicators-guide': {
+    title: `Dota 2 Rune Timer ${SEO_YEAR} | Spawn Hacks`,
+    description:
+      'Rune spawn indicators for mid tempo—best dota hacks cheats module on dota2hacks.org Lite and Pro.',
+    keywords: joinKeywords(KEYWORD_GROUPS.features, ['dota 2 rune hack', 'dota 2 maphack']),
+  },
+  'dota-2-roshan-timer-guide': {
+    title: `Dota 2 Roshan Timer ${SEO_YEAR} | Objective Hack`,
+    description:
+      'Roshan timer and Aegis tracking with ESP—dota2hacks.org best dota hacks cheats objective module.',
+    keywords: joinKeywords(KEYWORD_GROUPS.features, ['dota 2 roshan hack', 'dota 2 esp hack']),
+  },
+  'dota-2-last-hit-creep-spawn-guide': {
+    title: `Dota 2 Last Hit Helper ${SEO_YEAR} | Lane Hacks`,
+    description:
+      'Last hit prediction and creep spawn timers—lane modules in the best dota hacks cheats stack at dota2hacks.org.',
+    keywords: joinKeywords(KEYWORD_GROUPS.features, ['dota 2 last hit script', 'dota 2 lane hack']),
+  },
+  'dota-2-enemy-inventory-esp-guide': {
+    title: `Dota 2 Inventory ESP ${SEO_YEAR} | Item Hacks`,
+    description:
+      'Enemy inventory ESP for Blink and BKB reads—Pro tier best dota hacks cheats on dota2hacks.org.',
+    keywords: joinKeywords(KEYWORD_GROUPS.features, ['dota 2 item esp', 'dota 2 wallhack']),
+  },
+  'dota-2-performance-optimized-mode-guide': {
+    title: `Dota 2 Performance ESP ${SEO_YEAR} | Optimized Hacks`,
+    description:
+      'Performance optimized mode for Hero ESP and map hack—smooth best dota hacks cheats on dota2hacks.org.',
+    keywords: joinKeywords(KEYWORD_GROUPS.features, ['dota 2 esp lag', 'dota 2 hack performance']),
+  },
 };
 
 export function getBlogSeoEntry(slug: string): BlogSeoEntry | undefined {

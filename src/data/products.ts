@@ -1,6 +1,7 @@
 import { t } from '../i18n';
 import { checkoutForSlug, checkoutPath } from '../config/checkout';
 import type { IconName } from '../components/icons/types';
+import { DOTA_CORE_FEATURE_MODULES } from './dotaFeatureModules';
 
 export interface ProductSlide {
   src: string;
@@ -58,7 +59,14 @@ export interface ProductPage {
 
 /** Guides paired with each product detail page */
 export const productRelatedBlogSlugs: Record<string, string[]> = {
-  lite: ['dota-2-map-hack-setup', 'dota-2-lite-vs-pro', 'dota-2-zoom-hack-guide', 'vac-patch-day-checklist'],
+  lite: [
+    'dota-2-map-hack-setup',
+    'dota-2-lite-vs-pro',
+    'dota-2-zoom-hack-guide',
+    'dota-2-hero-esp-items-level-guide',
+    'dota-2-full-map-hack-remove-fog-guide',
+    'dota-2-cheat-overlay-lag-fix',
+  ],
   pro: [
     'dota-2-scripts-ranked-mmr',
     'dota-2-auto-combo-hero-scripts',
@@ -68,9 +76,10 @@ export const productRelatedBlogSlugs: Record<string, string[]> = {
   elite: [
     'dota-2-elite-tier-guide',
     'dota-2-cheats-features-guide',
+    'best-dota-2-hacks-cheats-2026',
+    'dota-2-hacks-october-2026-update',
     'dota-2-map-hack-setup',
     'vac-patch-day-checklist',
-    'how-to-buy-dota-2-cheats-2026',
   ],
   'hwid-spoofer': [
     'dota-2-hwid-spoofer-after-ban',
@@ -326,16 +335,10 @@ const productContent: Record<
     limitations: sharedLimitations,
     systemRequirements: dotaSystemRequirements,
     fullFeatures: [
-      'Player ESP & hero boxes',
-      'Ward & sentry locator',
-      'Jungle camp awareness',
-      'Ability cooldown tracking',
-      'Minimap hack overlay',
+      ...DOTA_CORE_FEATURE_MODULES,
       'Streamproof overlay mode',
-      'Distance readouts',
-      'Team color filter',
-      'Rune spawn timers',
       'Zoom hack',
+      'Minimap hack overlay',
       'Turbo preset config',
       'Ranked preset config',
       'Cloud config backup',
@@ -355,7 +358,7 @@ const productContent: Record<
     limitations: sharedLimitations,
     systemRequirements: dotaSystemRequirements,
     fullFeatures: [
-      'All Lite ESP & map hack modules',
+      ...DOTA_CORE_FEATURE_MODULES,
       'Auto Combo scripts',
       'Orbwalker',
       'Smart Cast & Prediction',
@@ -370,7 +373,6 @@ const productContent: Record<
       'Lobby test profile',
       'Cloud config backup',
       'Patch auto-updater',
-      'Discord operator support',
     ],
     overview: {
       title: 'Built around a clear Dota 2 scripts workflow',
@@ -386,14 +388,13 @@ const productContent: Record<
     limitations: sharedLimitations,
     systemRequirements: dotaSystemRequirements,
     fullFeatures: [
-      'All Lite + Pro modules',
+      ...DOTA_CORE_FEATURE_MODULES,
       'Auto Farm Bot',
       'Lane Control AI',
       'Stack timer',
       'Auto Courier Manager',
       'Auto Kill Steal',
       'Auto Dagon',
-      'Full map hack suite',
       'Smoke alert system',
       'Vision detector',
       'Skin Changer (Unlock All)',

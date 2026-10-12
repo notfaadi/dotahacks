@@ -1,0 +1,40 @@
+---
+import SectionHeader from '../SectionHeader.astro';
+import Icon from '../icons/Icon.astro';
+import { DOTA_OS_REQUIREMENT, DOTA_SECURITY_SETTINGS } from '../../data/dotaFeatureModules';
+---
+
+<section
+  class="border-t border-border bg-muted/20 py-12 md:py-16"
+  aria-labelledby="product-system-security-title"
+>
+  <div class="mx-auto max-w-6xl px-5">
+    <SectionHeader
+      eyebrow="Compatibility"
+      title="System requirements"
+      desc="Confirm Windows security settings and OS version before loader install."
+      titleId="product-system-security-title"
+    />
+
+    <div class="product-security-reqs mt-10 space-y-4">
+      <div class="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+        {
+          DOTA_SECURITY_SETTINGS.map((label) => (
+            <div class="product-security-reqs__chip flex items-center gap-2 rounded-xl border border-border/80 bg-background px-4 py-3 text-sm font-semibold uppercase tracking-wide text-foreground">
+              <Icon name="check" size={16} class="shrink-0 text-primary" aria-hidden="true" />
+              {label}
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="product-security-reqs__os flex items-start gap-3 rounded-xl border border-border/80 bg-background px-4 py-4 text-sm text-muted-foreground">
+        <Icon name="reqWindows" size={20} class="mt-0.5 shrink-0 text-primary" aria-hidden="true" />
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wider text-primary">Operating system</p>
+          <p class="mt-1 font-medium text-foreground">{DOTA_OS_REQUIREMENT}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

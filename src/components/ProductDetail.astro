@@ -11,6 +11,7 @@ import ProductDetailHeader from './product/ProductDetailHeader.astro';
 import ProductCheckoutPanel from './product/ProductCheckoutPanel.astro';
 import ProductHighlightsSection from './product/ProductHighlightsSection.astro';
 import ProductFeaturesSection from './product/ProductFeaturesSection.astro';
+import ProductSystemRequirementsSection from './product/ProductSystemRequirementsSection.astro';
 import ProductDescriptionSection from './product/ProductDescriptionSection.astro';
 import ProductExperienceSection from './product/ProductExperienceSection.astro';
 import ProductRelatedGuidesSection from './product/ProductRelatedGuidesSection.astro';
@@ -58,6 +59,8 @@ const showDescToggle = descriptionBlocks.length > 2;
 />
 
 <ProductFeaturesSection features={product.fullFeatures} productName={product.name} />
+
+{product.kind === 'tier' && <ProductSystemRequirementsSection />}
 
 <ProductExperienceSection
   images={product.images}
